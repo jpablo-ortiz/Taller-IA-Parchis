@@ -1,9 +1,9 @@
 import turtle
 from tkinter import *
 
-from acciones_parchis import Jugar, PintarFichas
 from components.gui_components import DADO
 from components.pintar_pantalla_inicial import pintar_pantalla_inicial
+from logica import Jugar, PintarFichas
 
 window = Tk()
 menu = Menu(window)
@@ -34,16 +34,16 @@ def Maxixd(jugador):
         lista_g = [80, 270]
         players = [1, 1]
         players[-1] = jugador
-    
+
         def MonitorBotones():
             def FunBotons():
                 Jugar(players, lista_r, lista_b, lista_y, lista_g, tortab)
             return FunBotons
 
-        boton = Button(window, relief = RIDGE, width = 30, height = 20, text = "Click!", command = MonitorBotones())
+        boton = Button(window, relief = RIDGE, width = 30, height = 20, text = "Siguiente Jugada", command = MonitorBotones())
         boton.config(bg = "black", fg = "white")
         boton.grid(row = 0, column = 0)
-            
+
 jugador = [0,1]
 def jugador2():
         jugador[-1] = 2
