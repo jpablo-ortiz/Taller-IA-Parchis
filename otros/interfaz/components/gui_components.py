@@ -8,7 +8,9 @@ def Pintar_Flechas(sa,sb,gt,sc,sd,gt1,col, tortab):   # ----->>>> Funcion para p
     tortab.seth(sa)
     tortab.fd(80)
     tortab.seth(sb)
-    tortab.fd(200)
+    #tortab.fd(200)
+    #tortab.fd(240)
+    tortab.fd(280)
     tortab.seth(sa)
     tortab.fd(40)
     tortab.goto(0,0)
@@ -16,7 +18,9 @@ def Pintar_Flechas(sa,sb,gt,sc,sd,gt1,col, tortab):   # ----->>>> Funcion para p
     tortab.seth(sa)
     tortab.fd(40)
     tortab.seth(sc)
-    tortab.fd(160)
+    #tortab.fd(160)
+    #tortab.fd(200)
+    tortab.fd(240)
     tortab.seth(sd)
     tortab.fd(40)
     tortab.seth(sc)
@@ -51,19 +55,19 @@ def Div_Cuadros(IrA,a,b, tortab):                       # ----->>>> Funcion para
             i += 1
 
 #---------CREAR CUADROS DE PARTIDA----------#
-def Cuadros_Partida(IrA,a, tortab):			# ----->>>> Funcion que crea las bases cuadradas de cada pieza							
+def Cuadros_Partida(IrA,a, tortab):			# ----->>>> Funcion que crea las bases cuadradas de cada pieza
     tortab.begin_fill()
     tortab.up()
     tortab.goto(IrA)
     tortab.down()
     tortab.seth(a)
-    tortab.fd(80)
+    tortab.fd(240)
     tortab.lt(90)
-    tortab.fd(80)
+    tortab.fd(240)
     tortab.lt(90)
-    tortab.fd(80)
+    tortab.fd(240)
     tortab.lt(90)
-    tortab.fd(80)
+    tortab.fd(240)
     tortab.end_fill()
 
 #-------DADO-----#
@@ -141,4 +145,3 @@ def DADO(dado, color, tortab):
             dos()
     elif dado == 1:
             uno()
-            

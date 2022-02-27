@@ -1,5 +1,5 @@
-from components.gui_components import DADO
 from algoritmo_min_max import dar_siguiente_paso
+from components.gui_components import DADO
 
 
 #----------MOVER PIEZA---------#
@@ -223,13 +223,13 @@ def Borrar_Pieza(Px, Py, tortab):
         tortab.end_fill()
 
         if Px == 30 and Py == 30:     #------>>>> Si cae en los triangulos, estos tambien se limpian cuando la pieza no esta. (vuelven a como deberian estar).
-                Sobre_Escribir(Px, Py)
+                Sobre_Escribir(Px, Py, tortab)
         elif Px == -50 and Py == 30:
-                Sobre_Escribir(Px, Py)
+                Sobre_Escribir(Px, Py, tortab)
         elif Px == -50 and Py == -50:
-                Sobre_Escribir(Px, Py)
+                Sobre_Escribir(Px, Py, tortab)
         elif Px == 30 and Py == -50:
-                Sobre_Escribir(Px, Py)
+                Sobre_Escribir(Px, Py, tortab)
 
 #-----FUNCION PARA MARCAR AL GANADOR------#
 def Marcar_Ganador(x, y, tortab):
